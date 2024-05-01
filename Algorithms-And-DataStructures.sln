@@ -4,6 +4,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloWorld", "HelloWorld\He
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TurboCollections", "TurboCollections\TurboCollections.vcxproj", "{878CE6FA-1FEA-4C29-A712-40D585008588}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TurboCollections.Test", "TurboCollections.Test\TurboCollections.Test.vcxproj", "{0060DF33-BC29-4F59-B591-159268662112}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{878CE6FA-1FEA-4C29-A712-40D585008588}.Debug|Any CPU.Build.0 = Debug|Win32
 		{878CE6FA-1FEA-4C29-A712-40D585008588}.Release|Any CPU.ActiveCfg = Release|Win32
 		{878CE6FA-1FEA-4C29-A712-40D585008588}.Release|Any CPU.Build.0 = Release|Win32
+		{0060DF33-BC29-4F59-B591-159268662112}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{0060DF33-BC29-4F59-B591-159268662112}.Debug|Any CPU.Build.0 = Debug|Win32
+		{0060DF33-BC29-4F59-B591-159268662112}.Release|Any CPU.ActiveCfg = Release|Win32
+		{0060DF33-BC29-4F59-B591-159268662112}.Release|Any CPU.Build.0 = Release|Win32
 	EndGlobalSection
 EndGlobal
