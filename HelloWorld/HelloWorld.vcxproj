@@ -156,6 +156,12 @@
   <ItemGroup>
     <ClCompile Include="HelloWorld.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TurboCollections\TurboCollections.vcxproj">
+      <Project>{878ce6fa-1fea-4c29-a712-40d585008588}</Project>
+      <Name>TurboCollections</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
