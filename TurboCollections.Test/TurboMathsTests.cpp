@@ -8,10 +8,16 @@ namespace TurboCollections
     {
         TEST(SayHello, WorksWithoutExeception)
         {
-            TurboCollections::TurboMaths::SayHello();
+            TurboMaths::SayHello();
 
             SUCCEED();
   
+        }
+        TEST(GetEvenNumbersList, IteratorWorks)
+        {
+            int maxNumber=12;
+            TurboMaths::GetEvenNumbersList(maxNumber);
+            SUCCEED();
         }
     }
     
