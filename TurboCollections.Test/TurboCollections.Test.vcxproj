@@ -48,6 +48,7 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
+    <ClCompile Include="TurboLinkedStackTests.cpp" />
     <ClCompile Include="TurboMathsTests.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -58,6 +59,9 @@
       <Project>{878ce6fa-1fea-4c29-a712-40d585008588}</Project>
       <Name>TurboCollections</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TurboLinkedStackTests.h" />
   </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
