@@ -160,10 +160,12 @@
   <ItemGroup>
     <ClCompile Include="TurboCollections.cpp" />
     <ClCompile Include="TurboMaths.cpp" />
+    <ClCompile Include="TurboSort.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Include\TurboMaths.h" />
     <ClInclude Include="TurboLinkedStack.h" />
+    <ClInclude Include="TurboSort.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
