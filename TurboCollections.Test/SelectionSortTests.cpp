@@ -8,7 +8,7 @@ namespace TurboCollections
     {
         TEST(SortList, SortInRightOrder)
         {
-            std:: vector<int> list {2,4,6,3,1,5};
+            std:: vector<int> list {5,6,2,3,1,4};
             TurboSort:: SelectionSort(list);
             EXPECT_THAT(list, testing:: ElementsAre(1,2,3,4,5,6));
         }
