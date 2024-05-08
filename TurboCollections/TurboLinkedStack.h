@@ -1,4 +1,5 @@
 #pragma once
+#include <gmock/gmock-matchers.h>
 
 template <typename T>
 class TurboLinkedStack
@@ -16,12 +17,13 @@ public:
         Node* newNode = new Node{item, lastNode};
         newNode->Previous;
         lastNode = newNode;
-        
-        // Insert Code from AddNumber Example in #4 here
     }
 
-    T& top() {
-        throw "NotImplementedException()";
+    T& top()
+    {
+        if (lastNode)
+
+        return lastNode.Value;
         // Return the Value of Last Node here.
     }
 
