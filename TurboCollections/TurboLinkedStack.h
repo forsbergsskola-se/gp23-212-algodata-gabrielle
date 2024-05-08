@@ -1,14 +1,17 @@
 #include "../packages/gmock.1.11.0/lib/native/include/gmock/gmock-matchers.h"
 
 template <typename T>
-class TurboLinkedStack<T> {
-    struct Node {
+class TurboLinkedStack<T>
+{
+    struct Node
+    {
         T Value;
         Node* Previous;
     };
     Node* lastNode;
 public:
-    void push(const T& item) {
+    void push(const T& item)
+    {
         //throw "NotImplementedException()";
         Node* FirstNode = new Node{0, nullptr};
         Node* LastNode = FirstNode;
@@ -28,7 +31,8 @@ public:
             Console.WriteLine("(END)");
         }
 
-        for(int i = 1; i < 5; i++){
+        for(int i = 1; i < 5; i++)
+        {
             addNumber(i);
         }
 
@@ -36,7 +40,8 @@ public:
         // Insert Code from AddNumber Example in #4 here
     }
 
-    T& top() {
+    T& top()
+    {
         //throw "NotImplementedException()";
         if(!lastNode.empty())
         {
