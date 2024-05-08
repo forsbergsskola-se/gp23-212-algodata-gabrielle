@@ -21,15 +21,13 @@ public:
 
     T& top()
     {
-        if (lastNode)
-
-        return lastNode.Value;
+        //return lastNode->Value;
         // Return the Value of Last Node here.
     }
 
     const void pop()
     {
-        throw "NotImplementedException()";
+        
         // Assign the Last Node's Previous Node to be the Last Node.
         // -- This effectively removes the previously Last Node of the Stack
         // -- Imagine LastNode is customer 436

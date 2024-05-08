@@ -23,11 +23,12 @@ namespace TurboCollections
         {
             TurboLinkedStack<int> stack;
             
-            stack.push(10);
-            stack.push(20);
-            stack.push(30);
+            
+            stack.top();
+            stack.top();
             assert(stack.lastNode->Value==30);
         }
+       
     }
 }
 
