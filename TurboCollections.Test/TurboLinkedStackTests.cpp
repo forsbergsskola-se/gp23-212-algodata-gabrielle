@@ -15,9 +15,9 @@ namespace TurboCollections
             stack.push(20);
             stack.push(30);
             
-            assert(stack.LastNode->Value == 30);
-            assert(stack.LastNode->Previous->Value == 20);
-            assert(stack.LastNode->Previous->Previous->Value == 10);
+            assert(stack.lastNode->Value == 30);
+            assert(stack.lastNode->Previous->Value == 20);
+            assert(stack.lastNode->Previous->Previous->Value == 10);
 
         }
     }
