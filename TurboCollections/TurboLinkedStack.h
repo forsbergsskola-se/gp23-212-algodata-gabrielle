@@ -21,19 +21,21 @@ public:
 
     T& top()
     {
-        //return lastNode->Value;
+        Node *top = nullptr;
+        top= top->Previous;
+        return top;
         // Return the Value of Last Node here.
     }
 
     const void pop()
     {
-        if (lastNode==null)
+        if (lastNode.Previous==nullptr)
         {
-            std::cout << "lastNode is empty";
+            lastNode->Value=lastNode;
         }
         else
         {
-            lastNode = lastNode->Previous;
+            std::cout << "Empty";
         }
         
         // Assign the Last Node's Previous Node to be the Last Node.
