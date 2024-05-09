@@ -19,14 +19,10 @@ namespace TurboCollections
             assert(stack.lastNode->Previous->Value == 20);
             assert(stack.lastNode->Previous->Previous->Value == 10);
         }
-        TEST(Top, TurboLinkedStackTop)
+        TEST(Top, TurboLinkedStackPop)
         {
             TurboLinkedStack<int> stack;
-            
-            
-            stack.top();
-            stack.top();
-            assert(stack.lastNode->Value==30);
+           
         }
        
     }

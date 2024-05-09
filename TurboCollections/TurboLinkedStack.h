@@ -27,6 +27,14 @@ public:
 
     const void pop()
     {
+        if (lastNode==null)
+        {
+            std::cout << "lastNode is empty";
+        }
+        else
+        {
+            lastNode = lastNode->Previous;
+        }
         
         // Assign the Last Node's Previous Node to be the Last Node.
         // -- This effectively removes the previously Last Node of the Stack
