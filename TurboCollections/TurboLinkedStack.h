@@ -48,7 +48,8 @@ public:
     }
     
     bool empty() const {
-        throw "NotImplementedException()";
+        if(lastNode==nullptr)
+            return true;
         // Return true, if the LastNode is null
     }
 
