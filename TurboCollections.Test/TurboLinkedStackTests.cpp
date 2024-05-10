@@ -22,7 +22,18 @@ namespace TurboCollections
         TEST(Top, TurboLinkedStackPop)
         {
             TurboLinkedStack<int> stack;
-           
+            stack.push(10);
+            stack.push(20);
+            stack.push(30);
+
+            assert(stack.top(),30);
+            stack.pop();
+            assert(stack.top(),20);
+            stack.pop();
+            assert(stack.top(),10);
+            stack.pop();
+            assert(stack.empty());
+            assert(stack.size(),3);
         }
        
     }
