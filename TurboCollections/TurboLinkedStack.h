@@ -53,14 +53,17 @@ public:
         // Return true, if the LastNode is null
     }
 
-    size_t size() const {
-        throw "NotImplementedException()";
+    size_t size() const
+    {
+        
         // Here, you need to do a while loop over all nodes
         // Similar to the previous PrintAllNodes Function
         // But instead of Printing Nodes, you just count how many Nodes you have visited
         // Similar to this:
         size_t count = 0;
-        while(false/* remove false and replace with correct condition...*/){
+        Node *newNode =lastNode;
+        while(lastNode!=nullptr)
+        {
             count++;
         }
         return count;
@@ -76,33 +79,46 @@ public:
         }
 
         Iterator<T>& operator++() {
-            throw "NotImplementedException()";
+            currentNode->Previous;
             // Make currentNode point to currentNode's previous node
             return *this;
         }
 
         T& operator*() const {
-            throw "NotImplementedException()";
+            return currentNode->Value;
             // Return the value of the CurrentNode
         }
 
         bool operator==(const Iterator<T>& other) const {
-            throw "NotImplementedException()";
+            Node *first = new Node(other);
+            Node *second = new Node (other);
+            if (first == second)
+            {
+                return true;
+            }
             // return true if both operators have the same current node
         }
-        bool operator!=(const Iterator<T>& other) const {
-            throw "NotImplementedException()";
+        bool operator!=(const Iterator<T>& other) const
+        {
+            Node *first = new Node(other);
+            Node *second = new Node (other);
+            if (first != second)
+            {
+                return true;
+            }
             // return true if both operators have different current nodes
         }
     };
 
-    Iterator<T> begin() {
-        throw "NotImplementedException()";
-        return Iterator<T>(LastNode);
+    Iterator<T> begin()
+    {
+        
+        return Iterator<T>(lastNode);
     }
     
-    Iterator<const T> begin() const {
-        throw "NotImplementedException()";
-        return Iterator<const T>(LastNode);
+    Iterator<const T> begin() const
+    {
+        
+        return Iterator<const T>(lastNode);
     }
 };
