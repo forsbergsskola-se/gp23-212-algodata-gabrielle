@@ -17,6 +17,7 @@ public:
         Node* newNode = new Node{item, lastNode};
         newNode->Previous;
         lastNode = newNode;
+        top()=newNode;
     }
 
     T& top()
