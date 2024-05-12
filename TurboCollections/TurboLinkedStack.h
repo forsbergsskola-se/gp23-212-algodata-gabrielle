@@ -1,8 +1,7 @@
 #pragma once
 
-
 template <typename T>
-class TurboLinkedStack
+class TurboLinkedStack<T>
 {
     struct Node {
         T Value;
