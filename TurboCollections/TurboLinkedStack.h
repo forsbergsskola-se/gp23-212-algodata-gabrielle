@@ -1,7 +1,8 @@
 #pragma once
+#include "../packages/gmock.1.11.0/lib/native/include/gmock/gmock-matchers.h"
 
 template <typename T>
-class TurboLinkedStack<T>
+class TurboLinkedStack
 {
     struct Node {
         T Value;
@@ -27,15 +28,10 @@ public:
 
     const void pop()
     {
-        if (lastNode->Previous==nullptr)
-        {
-            std::cout << "Empty";
-        }
-        else
-        {
-            
-            lastNode = lastNode->Previous;
-        }
+        lastNode->Value;
+        Node* temp = lastNode;
+        lastNode = lastNode->Previous;
+        delete temp;
         
         // Assign the Last Node's Previous Node to be the Last Node.
         // -- This effectively removes the previously Last Node of the Stack
