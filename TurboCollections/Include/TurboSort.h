@@ -9,6 +9,7 @@ namespace TurboCollections
     public:
         
         static void SelectionSort(std::vector<int> &list);
+        static void BubbleSort(std::vector<int> &bubble);
     
     };
 
