@@ -26,21 +26,17 @@ void TurboCollections :: TurboSort :: SelectionSort(std::vector<int>& sortNum)
 
 void TurboCollections:: TurboSort:: BubbleSort(std::vector<int> &bubSort)
 {
-    bool swapped;
         for (int i = bubSort.size()-1; i> 0;i--)
         {
-            swapped=false;
 
             for (int j = 0; j<i;j++)
             {
                 if (bubSort[j]>bubSort[j+1])
                 {
                     std::swap(bubSort[j],bubSort[j+1]);
-                    swapped=true;
                 }
             }
         }
-        
     
 }
    
