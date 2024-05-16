@@ -1,7 +1,16 @@
 ﻿#pragma once
 
-class TurboBinarySearchTree
+namespace TurboCollections
 {
-public:
+    template <typename T>
+    class TurboBinarySearchTree
+    {
+        
+    public:
+        void Insert(T);
+        bool Search(T);
+        bool Delete(T);
     
-};
+    }; 
+}
+
