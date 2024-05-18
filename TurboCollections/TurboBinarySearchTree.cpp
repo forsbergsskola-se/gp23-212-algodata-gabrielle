@@ -20,9 +20,29 @@ Node* createNode (int value)
 template <typename T>
 void TurboCollections::TurboBinarySearchTree<T>::Insert(T)
 {
-    //the left child has index n*2+1
+    //the left child has index n*2+1 
     //the right child has index n*2+2
     //(inserts a new item into the tree)
+    T root = new Node;
+    root=nullptr;
+
+    for(int i = 0; i <1000; i+=2)
+    {
+        if (i <root)
+        {
+            root = root*2+1;
+        }
+        else if(i>root)
+        {
+            root = root*2+2;
+        }
+        else
+        {
+            root=i;
+        }
+
+        
+    }
     
 
     
