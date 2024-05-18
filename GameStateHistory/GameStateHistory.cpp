@@ -1,4 +1,4 @@
-
+#include <string>
 #include <iostream>
 #include "..\TurboCollections/TurboLinkedStack.h"
 
@@ -6,29 +6,48 @@
 int main(int argc, char* argv[])
 {
     TurboLinkedStack<int> stack;
-    int level{}, forSwitch;
+    int level{}, choice;
     bool isRunning =true;
+    std:: string settings, mainMenu;
+    settings = "Settings";
+    mainMenu = "Main Menu";
 
     while (isRunning==true)
     {
-        std::cout <<" You are here: " <<forSwitch << "\n What do you want to do? ";
-        switch (forSwitch /*not sure what to put here*/)
+        if (stack.empty())
+        {
+            std:: cout<< "You are here: Main Menu\n";
+        }
+        else
+        {
+            std :: cout<< "Stack is not empty";
+        }
+        
+        std::cout <<"What do you want to do? ";
+        std:: cin>>choice;
+        switch (choice)
         {
             
         case 0:
             // level up
-           stack.push(level);
+                
+           stack.push(level++);
+            std::cout<< "You are here: level "<<level;
+            
             break;
         case 1:
             //  go to setting if on main menu
             //  go to main menu if on level 
-            stack.top(); // should not be 'top' but not sure what
+            // should not be 'top' but not sure what
             break;
-        case "b":
+        case 'b':
             // go back one step
-            stack.pop();
+            stack.push(level++);
+            std::cout<< "level"<<level;
             break;
-                
+        default:
+                std:: cout<< "not a choice\n";
+                break;
         }
     }
     return 0;
