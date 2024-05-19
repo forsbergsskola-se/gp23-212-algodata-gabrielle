@@ -1,5 +1,6 @@
 ﻿#include "TurboBinarySearchTree.h"
 
+#include "../packages/gmock.1.11.0/lib/native/include/gmock/gmock-matchers.h"
 #include "../packages/gmock.1.11.0/lib/native/include/gtest/internal/gtest-type-util.h"
 
 struct Node
@@ -9,44 +10,24 @@ struct Node
     Node* right;
 };
 
-Node* createNode (int value)
-{
-    Node* newNode = new Node();
-    newNode->value;
-    newNode->left = nullptr;
-    newNode->right =nullptr;
-}
-
 template <typename T>
-void TurboCollections::TurboBinarySearchTree<T>::Insert(T)
+void TurboCollections::TurboBinarySearchTree<T>::Insert(T value)
 {
+    Node* root = new Node{value};
+    
+   if (root==nullptr)
+       return;
+    Insert(root->left);
+    Insert()(root->right);
+}
     //the left child has index n*2+1 
     //the right child has index n*2+2
     //(inserts a new item into the tree)
-    T root = new Node;
-    root=nullptr;
-
-    for(int i = 0; i <1000; i+=2)
-    {
-        if (i <root)
-        {
-            root = root*2+1;
-        }
-        else if(i>root)
-        {
-            root = root*2+2;
-        }
-        else
-        {
-            root=i;
-        }
-
-        
-    }
+  
     
 
     
-}
+
 template <typename T>
 bool TurboCollections::TurboBinarySearchTree<T>::Search(T)
 {
