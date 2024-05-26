@@ -8,19 +8,14 @@ int main(int argc, char* argv[])
     TurboLinkedStack<int> stack;
     int level{}, choice;
     bool isRunning =true;
-    std:: string settings, mainMenu;
-    settings = "Settings";
-    mainMenu = "Main Menu";
+   
 
     while (isRunning==true)
     {
+        std::cout<< "You are here ";
         if (stack.empty())
         {
-            std:: cout<< "You are here: Main Menu\n";
-        }
-        else
-        {
-            std :: cout<< "Stack is not empty";
+            std::cout<< "Main Menu "<< std::endl;
         }
         
         std::cout <<"What do you want to do? ";
@@ -30,9 +25,11 @@ int main(int argc, char* argv[])
             
         case 0:
             // level up
-                
-           stack.push(level++);
-            std::cout<< "You are here: level "<<level;
+            stack.push(level++);
+            stack.
+            std::<< "Level "<<level << std::endl;
+            
+           
             
             break;
         case 1:
@@ -40,10 +37,16 @@ int main(int argc, char* argv[])
             //  go to main menu if on level 
             // should not be 'top' but not sure what
             break;
-        case 'b':
+        case 2:
             // go back one step
-            stack.push(level++);
-            std::cout<< "level"<<level;
+                if (level==0)
+                    std::cout << "Main Menue"<< std::endl;
+            else
+            {
+                stack.pop();
+                std::cout<< "level"<<level-- << std::endl;
+            }
+            
             break;
         default:
                 std:: cout<< "not a choice\n";
