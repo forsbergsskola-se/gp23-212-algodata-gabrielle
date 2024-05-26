@@ -8,14 +8,14 @@ class TurboLinkedStack
         T Value;
         Node* Previous;
     };
-    
-public:
-    
     Node* lastNode;
+public:
+    TurboLinkedStack():lastNode(nullptr){};
+    
     void push(const T& item)
     {
         Node* newNode = new Node{item, lastNode};
-        newNode->Previous;
+        newNode->Previous =lastNode;
         lastNode = newNode;
     }
 
