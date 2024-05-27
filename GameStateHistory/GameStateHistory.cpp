@@ -6,19 +6,35 @@
 int main(int argc, char* argv[])
 {
     TurboLinkedStack<int> stack;
-    int level{}, choice;
+    int level{}, choice, menuLevel;
     bool isRunning =true;
    
 
     while (isRunning)
     {
-        std::cout<< "You are here ";
+        
         if (stack.empty())
         {
+            std::cout<< "You are here: ";
             std::cout<< "Main Menu "<< std::endl;
+            std::cout <<"What do you want to do? "<< std::endl;
+            std:: cout<< "(0): Go to Level 1"<< std::endl;
+            std:: cout<< "(1): Go to Settings"<< std::endl;
+        }
+        else
+        {
+            std::cout <<"What do you want to do? "<<std::endl;
+            
+            std::cout <<"(0): Go to Level "<< level<<std::endl;
+            
+            std::cout <<"(1): Go to Main Menu"<<std::endl;
+            if (level <=1) std::cout <<"(b): Go back to Main Menu"<<std::endl;
+            else
+            {
+                std::cout <<"(b): Go back to Level "<< level<<std::endl;
+            }
         }
         
-        std::cout <<"What do you want to do? ";
         std:: cin>>choice;
         switch (choice)
         {
@@ -26,6 +42,7 @@ int main(int argc, char* argv[])
         case 0:
             // level up
             stack.push(level++);
+            std::cout<< "You are here: ";
             std:: cout<< "Level "<<level << std::endl;
             
            
@@ -39,11 +56,15 @@ int main(int argc, char* argv[])
         case 2:
             // go back one step
                 if (level==1)
+                {
+                    std::cout<< "You are here: ";
                     std::cout << "Main Menu"<< std::endl;
+                }
             else
             {
                 stack.pop();
                 level--;
+                std::cout<< "You are here ";
                 std::cout<< "Level "<<level << std::endl;
             }
             
