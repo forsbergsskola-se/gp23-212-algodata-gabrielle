@@ -1,5 +1,6 @@
 #pragma once
 //#include "../packages/gmock.1.11.0/lib/native/include/gmock/gmock-matchers.h"
+//#include "../packages/gmock.1.11.0/lib/native/include/gmock/gmock-matchers.h"
 
 template <typename T>
 class TurboLinkedStack
@@ -14,15 +15,14 @@ public:
     
     void push(const T& item)
     {
-        Node* newNode = new Node{item, lastNode};
+        Node* newNode = new Node{item,lastNode};
         newNode->Previous =lastNode;
         lastNode = newNode;
     }
 
     T& top()
     {
-        
-        return lastNode->Value;
+        if (!empty()) return lastNode->Value;
         // Return the Value of Last Node here.
     }
 
@@ -43,8 +43,7 @@ public:
     }
     
     bool empty() const {
-        if(lastNode==nullptr)
-            return true;
+        return lastNode==nullptr;
         // Return true, if the LastNode is null
     }
 
