@@ -10,7 +10,7 @@ int main(int argc, char* argv[])
     bool isRunning =true;
    
 
-    while (isRunning==true)
+    while (isRunning)
     {
         std::cout<< "You are here ";
         if (stack.empty())
@@ -26,8 +26,7 @@ int main(int argc, char* argv[])
         case 0:
             // level up
             stack.push(level++);
-            stack.
-            std::<< "Level "<<level << std::endl;
+            std:: cout<< "Level "<<level << std::endl;
             
            
             
@@ -39,12 +38,13 @@ int main(int argc, char* argv[])
             break;
         case 2:
             // go back one step
-                if (level==0)
-                    std::cout << "Main Menue"<< std::endl;
+                if (level==1)
+                    std::cout << "Main Menu"<< std::endl;
             else
             {
                 stack.pop();
-                std::cout<< "level"<<level-- << std::endl;
+                level--;
+                std::cout<< "Level "<<level << std::endl;
             }
             
             break;
