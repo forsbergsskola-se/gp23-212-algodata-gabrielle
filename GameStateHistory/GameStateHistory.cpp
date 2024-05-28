@@ -1,12 +1,14 @@
 #include <string>
 #include <iostream>
+
+//#include "../packages/gmock.1.11.0/lib/native/src/gtest/src/gtest-internal-inl.h"
 #include "..\TurboCollections/TurboLinkedStack.h"
 
 
 int main(int argc, char* argv[])
 {
     TurboLinkedStack<int> stack;
-    int level{}, choice;
+    int choice;
     bool isRunning =true;
    
 
@@ -15,20 +17,22 @@ int main(int argc, char* argv[])
         
         if (stack.empty())
         {
+            
+            stack.push(0);
             std::cout<< "You are here: ";
             std::cout<< "Main Menu "<< std::endl;
             std::cout <<"What do you want to do? "<< std::endl;
-            std:: cout<< "(0): Go to Level 1"<< std::endl;
+            std:: cout<< "(0): Go to Level "<<stack.top()+1<< std::endl;
             std:: cout<< "(1): Go to Settings"<< std::endl;
-            stack.push(0);
+            
+            
         }
         else
         {
             std::cout <<"What do you want to do? "<<std::endl;
-            
             std::cout <<"(0): Go to Level "<< stack.top()+1<<std::endl;
-            
             std::cout <<"(1): Go to Main Menu"<<std::endl;
+
             if (stack.top() <=1) std::cout <<"(b): Go back to Main Menu"<<std::endl;
             else
             {
@@ -58,11 +62,13 @@ int main(int argc, char* argv[])
             break;
         case 2:
             // go back one step
-                if (level==1)
-                {
-                    std::cout<< "You are here: ";
-                    std::cout << "Main Menu"<< std::endl;
-                }
+            if (stack.top()-1 == 0)
+            {
+                stack.empty();
+                std::cout<< "You are here: ";
+                std::cout << "Main Menu"<< std::endl;
+                stack.top()--;
+            }
             else
             {
                 stack.pop();
