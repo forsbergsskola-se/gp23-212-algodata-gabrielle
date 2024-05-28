@@ -9,8 +9,9 @@ class TurboLinkedStack
         T Value;
         Node* Previous;
     };
-    Node* lastNode;
+    
 public:
+    Node* lastNode;
     TurboLinkedStack():lastNode(nullptr){};
     
     void push(const T& item)
@@ -28,18 +29,19 @@ public:
 
     const void pop()
     {
+        if(!lastNode)
+        {
+            return;
+        }
         lastNode->Value;
-        Node* temp = lastNode;
+        Node* newNode = lastNode;
         lastNode = lastNode->Previous;
-        delete temp;
         
-        // Assign the Last Node's Previous Node to be the Last Node.
-        // -- This effectively removes the previously Last Node of the Stack
-        // -- Imagine LastNode is customer 436
-        // -- -- who remembered that customer 435 was before him.
-        // -- We assign that before customer 435 to LastNode.
-        // -- -- 435 knows that 434 was before him.
-        // -- -- But he has no memory of customer 436.
+        if (newNode->Value<1)
+        {
+            lastNode=nullptr;
+        }
+        delete newNode;
     }
     
     bool empty() const {
