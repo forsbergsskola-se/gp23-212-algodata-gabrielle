@@ -1,18 +1,17 @@
 #pragma once
 
 template <typename T>
-struct Node {
-    T Value;
-    Node* Previous;
-       
-};
-template <typename T>
 class TurboLinkedStack
 {
-   
+    struct Node {
+        T Value;
+        Node* Previous;
+       
+    };
     
 public:
     Node* lastNode;
+    
     
     void push(const T& item)
     {
