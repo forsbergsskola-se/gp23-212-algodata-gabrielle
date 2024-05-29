@@ -1,18 +1,18 @@
 #pragma once
-//#include "../packages/gmock.1.11.0/lib/native/include/gmock/gmock-matchers.h"
-//#include "../packages/gmock.1.11.0/lib/native/include/gmock/gmock-matchers.h"
 
+template <typename T>
+struct Node {
+    T Value;
+    Node* Previous;
+       
+};
 template <typename T>
 class TurboLinkedStack
 {
-    struct Node {
-        T Value;
-        Node* Previous;
-    };
+   
     
 public:
     Node* lastNode;
-    TurboLinkedStack():lastNode(nullptr){};
     
     void push(const T& item)
     {
