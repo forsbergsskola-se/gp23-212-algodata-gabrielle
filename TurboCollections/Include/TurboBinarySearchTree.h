@@ -13,6 +13,7 @@ namespace TurboCollections
             Node* right;
             Node (int val): value(val), left(nullptr),right(nullptr){}
         };
+    
         
     public:
         Node* root;
@@ -43,12 +44,30 @@ namespace TurboCollections
                 break;
 
             }
-   
-            
-            
-            bool Search(T);
-            bool Delete(T);
 
+        }
+        
+        bool Search(T data)
+        {
+              if (root == data ) return root;
+
+            while(root!=nullptr)
+            {
+                if (data>root->left)
+                {
+                    return true;
+                }
+                else
+                {
+                    return true;
+                }
+                
+            }
+            return false;
+        }
+        bool Delete(T)
+        {
+            
         }
     };
 };
