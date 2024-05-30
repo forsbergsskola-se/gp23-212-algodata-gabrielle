@@ -24,20 +24,28 @@ namespace TurboCollections
                 root =newNode;
                 return;
             }
-   
-    
-            if (newNode < root)
+            while (newNode)
             {
+                if (newNode > root)
+                {
+                    
+                    Insert(root->left->value);
         
-                Insert(root->left->value);
-        
+                }
+
+                if (newNode<root)
+                {
+                    Insert(root->right->value);
+                }
+
             }
+   
+            
+            
+            bool Search(T);
+            bool Delete(T);
 
-            else Insert(root->right->value);
-        };
-        bool Search(T);
-        bool Delete(T);
-
-    }; 
-}
+        }
+    };
+};
 
