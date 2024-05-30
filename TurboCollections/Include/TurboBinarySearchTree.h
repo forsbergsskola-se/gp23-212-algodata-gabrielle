@@ -24,19 +24,23 @@ namespace TurboCollections
                 root =newNode;
                 return;
             }
-            while (newNode)
+            Node* current = root;
+            while (current!=nullptr)
             {
-                if (newNode > root)
+                if (data < current->value)
                 {
                     
-                    Insert(root->left->value);
+                   current->left = current;
+                    current->left = newNode;
         
                 }
 
-                if (newNode<root)
+                if (data>current->value)
                 {
-                    Insert(root->right->value);
+                    current->right=current;
+                    current->right=newNode;
                 }
+                break;
 
             }
    
