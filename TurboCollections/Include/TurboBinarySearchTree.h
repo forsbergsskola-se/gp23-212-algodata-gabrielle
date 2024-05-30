@@ -65,9 +65,15 @@ namespace TurboCollections
             }
             return false;
         }
-        bool Delete(T)
+        bool Delete(T data)
         {
-            
+           while (root->left!=nullptr)
+           {
+               if (root->left==data) delete root;
+               if (root->right==data) delete root;
+               return true;
+           }
+            return false;
         }
     };
 };
