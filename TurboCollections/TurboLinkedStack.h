@@ -6,16 +6,16 @@ class TurboLinkedStack
     struct Node {
         T Value;
         Node* Previous;
-       
+       Node(T val): Value(val), Previous(nullptr){}
     };
     
 public:
-    Node* lastNode;
+    Node* lastNode = nullptr;
     
     
     void push(const T& item)
     {
-        Node* newNode = new Node{item,lastNode};
+        Node* newNode = new Node(item);
         newNode->Previous =lastNode;
         lastNode = newNode;
     }
