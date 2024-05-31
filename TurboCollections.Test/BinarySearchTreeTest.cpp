@@ -7,23 +7,35 @@ namespace TurboCollections
 {
     namespace BinarySearchTreeTest
     {
-        TurboBinarySearchTree<int> numbers;
+        //TurboBinarySearchTree<int> numbers;
         
-            TEST(binary_search_tree_test, InsertMultipleValues)
-            {
-                numbers.Insert(5);
-                numbers.Insert(3);
-                numbers.Insert(7);
+        TEST(BinarySearchTreeDelete, ReturnsTrueIfItemFound)
+        {
+            TurboBinarySearchTree<int> tree{};
+            tree.Insert(3);
+            tree.Insert(5);
+            tree.Insert(1);
+            EXPECT_TRUE(tree.Delete(5));
+        }
 
-                ASSERT_NE(numbers.root, nullptr);
-                EXPECT_EQ(numbers.root->value, 5);
+        TEST(BinarySearchTreeDelete, ReturnsFalseIfItemNotFound)
+        {
+            TurboBinarySearchTree<int> tree{};
+            tree.Insert(3);
+            tree.Insert(5);
+            tree.Insert(1);
+            EXPECT_FALSE(tree.Delete(4));
+        }
 
-                ASSERT_NE(numbers.root->left, nullptr);
-                EXPECT_EQ(numbers.root->left->value, 3);
-
-                ASSERT_NE(numbers.root->right, nullptr);
-                EXPECT_EQ(numbers.root->right->value, 7);
-            }
+        TEST(BinarySearchTreeDelete, RemovesFoundItem)
+        {
+            TurboBinarySearchTree<int> tree{};
+            tree.Insert(3);
+            tree.Insert(5);
+            tree.Insert(1);
+            tree.Delete(5);
+            EXPECT_FALSE(tree.Search(5));
+        }
 
         
     }

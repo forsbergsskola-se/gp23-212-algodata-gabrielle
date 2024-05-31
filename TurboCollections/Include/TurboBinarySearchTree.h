@@ -49,17 +49,21 @@ namespace TurboCollections
         
         bool Search(T data)
         {
-              if (root == data ) return root;
+            Node* sNode = new Node(data);
+              if (root->value == data ) return root;
 
             while(root!=nullptr)
             {
-                if (data>root->left)
+                root = sNode;
+                if (root < sNode->left)
                 {
-                    return true;
+                    if (sNode->left!=nullptr)
+                        return true;
                 }
                 else
                 {
-                    return true;
+                    if (sNode->right!=nullptr)
+                        return true;
                 }
                 
             }
@@ -67,11 +71,23 @@ namespace TurboCollections
         }
         bool Delete(T data)
         {
-           while (root->left!=nullptr)
+            Node* remove = root;
+           while (remove!=nullptr)
            {
-               if (root->left==data) delete root;
-               if (root->right==data) delete root;
-               return true;
+               if (remove->value>data)
+               {
+                 if (data == remove->value)
+                 {
+                     delete remove;
+                 }  
+               }
+               else
+               {
+                   if (data == remove->value)
+                   {
+                       delete remove;
+                   }  
+               }
            }
             return false;
         }
