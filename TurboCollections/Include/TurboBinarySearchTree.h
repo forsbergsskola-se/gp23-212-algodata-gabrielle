@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include <vector>
 
+
 namespace TurboCollections
 {
     template <typename T>
@@ -72,20 +73,24 @@ namespace TurboCollections
         bool Delete(T data)
         {
             Node* remove = root;
-           while (remove!=nullptr)
+           while (remove->value!=data)
            {
                if (remove->value>data)
                {
+                   remove = remove->left;
                  if (data == remove->value)
                  {
                      delete remove;
+                     return true;
                  }  
                }
-               else
+               if (remove->value<data)
                {
+                   remove = remove->right;
                    if (data == remove->value)
                    {
                        delete remove;
+                       return true;
                    }  
                }
            }
