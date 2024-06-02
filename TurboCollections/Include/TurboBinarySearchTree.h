@@ -66,9 +66,9 @@ namespace TurboCollections
                     if (sNode->right!=nullptr)
                         return true;
                 }
-                
+                return false;
             }
-            return false;
+            
         }
         bool Delete(T data)
         {
@@ -93,8 +93,9 @@ namespace TurboCollections
                        return true;
                    }  
                }
+               return false;
            }
-            return false;
+            
         }
     };
 };
