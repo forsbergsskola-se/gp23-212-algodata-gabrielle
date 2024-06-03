@@ -42,6 +42,15 @@ namespace TurboCollections
     TEST(BSTTest, InsertTest)
     {
         TurboBinarySearchTree<int> tree{};
+
+        tree.Insert(10);
+        tree.Insert(5);
+        tree.Insert(15);
+        tree.Insert(3);
+        tree.Insert(7);
+        tree.Insert(12);
+        tree.Insert(17);
+        
         EXPECT_TRUE(tree.Search(10));
         EXPECT_TRUE(tree.Search(5));
         EXPECT_TRUE(tree.Search(15));
