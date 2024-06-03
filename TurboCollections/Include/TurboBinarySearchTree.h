@@ -31,17 +31,16 @@ namespace TurboCollections
             {
                 if (data < root->value)
                 {
-                   root->left = root;
                     root->left = newNode;
+                    return;
         
                 }
 
                 if (data>root->value)
                 {
-                    root->right=root;
                     root->right=newNode;
+                    return;
                 }
-                break;
 
             }
 
