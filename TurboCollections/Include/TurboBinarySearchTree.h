@@ -26,21 +26,20 @@ namespace TurboCollections
                 root =newNode;
                 return;
             }
-            Node* current = root;
-            while (current!=nullptr)
+            
+            while (root!=nullptr)
             {
-                if (data < current->value)
+                if (data < root->value)
                 {
-                    
-                   current->left = current;
-                    current->left = newNode;
+                   root->left = root;
+                    root->left = newNode;
         
                 }
 
-                if (data>current->value)
+                if (data>root->value)
                 {
-                    current->right=current;
-                    current->right=newNode;
+                    root->right=root;
+                    root->right=newNode;
                 }
                 break;
 
