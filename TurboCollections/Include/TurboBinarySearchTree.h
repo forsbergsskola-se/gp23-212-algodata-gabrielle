@@ -21,26 +21,39 @@ namespace TurboCollections
         void Insert( T data)
         {
             Node* newNode = new Node(data);
+            Node* secondNode = nullptr;
             if (root==nullptr)
             {
                 root =newNode;
                 return;
             }
             
-            while (root!=nullptr)
+            while (root!= nullptr)
             {
-                if (data < root->value)
+                secondNode =newNode;
+                if (data < root->value && root->left==nullptr)
                 {
                     root->left = newNode;
                     return;
         
                 }
 
-                if (data>root->value)
+                if (data>root->value && root->right==nullptr)
                 {
                     root->right=newNode;
                     return;
                 }
+
+                if (data > secondNode->value)
+                {
+                    secondNode->left = new Node (data);
+                    
+                }
+                else
+                {
+                    secondNode->right = new Node (data);
+                }
+                return;
 
             }
 
