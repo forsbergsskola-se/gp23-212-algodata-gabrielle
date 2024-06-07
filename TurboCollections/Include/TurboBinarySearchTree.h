@@ -17,7 +17,7 @@ namespace TurboCollections
     
         
     public:
-        Node* root;
+        Node* root = nullptr;
         void Insert( T data)
         {
             Node* newNode = new Node(data);
