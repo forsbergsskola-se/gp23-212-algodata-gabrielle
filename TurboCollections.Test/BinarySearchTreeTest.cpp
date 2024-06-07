@@ -33,8 +33,8 @@ namespace TurboCollections
             tree.Insert(3);
             tree.Insert(5);
             tree.Insert(1);
-            //tree.Delete(5);
-            EXPECT_TRUE(tree.Search(5));
+            tree.Delete(5);
+            EXPECT_FALSE(tree.Search(5));
         }
         
     };
