@@ -56,24 +56,29 @@ namespace TurboCollections
         bool Search(T data)
         {
             Node* sNode = new Node(data);
-              if (root->value == data ) return root;
+              if (root->value == data ) return true;
 
-            while(root!=nullptr)
+            while(sNode!=nullptr)
             {
-                root = sNode;
-                if (root < sNode->left)
+                
+                if (sNode < root->left)
                 {
-                    if (sNode->left!=nullptr)
+                    Node* leftNode = root->left;
+                    
+                    if (sNode->value == leftNode->value)
                         return true;
                 }
                 else
                 {
-                    if (sNode->right!=nullptr)
+                    Node* rightNode = root->right;
+                    if (sNode->value ==  rightNode->value)
                         return true;
                 }
                 return false;
             }
             
+
+
         }
         bool Delete(T data)
         {
