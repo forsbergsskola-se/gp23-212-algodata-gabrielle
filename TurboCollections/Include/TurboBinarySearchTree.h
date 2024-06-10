@@ -1,4 +1,5 @@
 ﻿#pragma once
+#include <iostream>
 #include <vector>
 
 
@@ -61,7 +62,7 @@ namespace TurboCollections
             while(sNode!=nullptr)
             {
                 
-                if (sNode < root->left)
+                if (sNode <= root->left)
                 {
                     Node* leftNode = root->left;
                     
