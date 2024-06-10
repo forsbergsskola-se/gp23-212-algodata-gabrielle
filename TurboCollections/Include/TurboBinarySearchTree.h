@@ -52,33 +52,29 @@ namespace TurboCollections
                 secondNode->right=newNode;
             }
 
+
         }
         
         bool Search(T data)
         {
-            Node* sNode = new Node(data);
-              if (root->value == data ) return true;
+            //Node* sNode = new Node(data);
+              
 
-            while(sNode!=nullptr)
+            Node* current = root;
+            while (current!= nullptr)
             {
+                if (current->value == data ) return true;
                 
-                if (sNode <= root->left)
+                if (data < current->value)
+                    {
+                      current = current->left;  
+                    }
+                if (data > current->value)
                 {
-                    Node* leftNode = root->left;
-                    
-                    if (sNode->value == leftNode->value)
-                        return true;
+                    current = current->right;
                 }
-                else
-                {
-                    Node* rightNode = root->right;
-                    if (sNode->value ==  rightNode->value)
-                        return true;
-                }
-                return false;
-            }
-            
 
+            }
 
         }
         bool Delete(T data)
