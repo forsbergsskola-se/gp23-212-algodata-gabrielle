@@ -79,30 +79,26 @@ namespace TurboCollections
         }
         bool Delete(T data)
         {
-            Node* remove = root;
-           while (remove->value!=data)
-           {
-               if (remove->value>data)
-               {
-                   remove = remove->left;
-                 if (data == remove->value)
-                 {
-                     delete remove;
-                     return true;
-                 }  
-               }
-               if (remove->value<data)
-               {
-                   remove = remove->right;
-                   if (data == remove->value)
-                   {
-                       delete remove;
-                       return true;
-                   }  
-               }
-               return false;
-           }
-            
+            Node* current = root;
+            while (current!= nullptr)
+            {
+                if (current->value == data )
+                {
+                    delete current;
+                    return true;
+                }
+                
+                if (data < current->value)
+                {
+                    current = current->left;  
+                }
+                if (data > current->value)
+                {
+                    current = current->right;
+                }
+
+            }
+            return false;
         }
     };
 };
