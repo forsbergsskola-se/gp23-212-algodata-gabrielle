@@ -18,6 +18,7 @@ namespace TurboCollections
     
         
     public:
+        
         Node* root = nullptr;
         void Insert( T data)
         {
@@ -51,16 +52,15 @@ namespace TurboCollections
             {
                 secondNode->right=newNode;
             }
-
+            
 
         }
         
         bool Search(T data)
         {
-            //Node* sNode = new Node(data);
-              
-
+            
             Node* current = root;
+            
             while (current!= nullptr)
             {
                 if (current->value == data ) return true;
@@ -75,7 +75,7 @@ namespace TurboCollections
                 }
 
             }
-
+            return false;
         }
         bool Delete(T data)
         {
@@ -85,6 +85,7 @@ namespace TurboCollections
                 if (current->value == data )
                 {
                     delete current;
+                    
                     return true;
                 }
                 
