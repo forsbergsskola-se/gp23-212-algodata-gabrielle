@@ -89,7 +89,6 @@ namespace TurboCollections
             Node* current = root;
             if (current == nullptr)
             {
-                //
                 return false;
             }
             while (current!= nullptr)
@@ -97,8 +96,8 @@ namespace TurboCollections
                 if (current->value == data )
                 {
                     delete current;
-                    current=nullptr;
-                    return true;
+                    current->value = 0;
+                    return current;
                 }
                 
                 if (data < current->value)
