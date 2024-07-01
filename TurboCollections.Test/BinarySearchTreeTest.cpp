@@ -84,7 +84,7 @@ namespace TurboCollections
         EXPECT_TRUE(tree.Search(15));
         
         EXPECT_FALSE(tree.Search(100));
-        EXPECT_FALSE(tree.Search(0));
+        EXPECT_FALSE(tree.Search(6));
     }
 
     TEST(BSTTest, RemoveTest)
