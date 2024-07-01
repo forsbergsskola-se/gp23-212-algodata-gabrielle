@@ -63,29 +63,41 @@ namespace TurboCollections
             
             while (current!= nullptr)
             {
+                
                 if (current->value == data ) return true;
                 
                 if (data < current->value)
                     {
-                      current = current->left;  
+                      current = current->left;
+                    if  (current == nullptr)
+                        return false;
                     }
                 if (data > current->value)
                 {
                     current = current->right;
+                    if (current == nullptr)
+                        return false;
                 }
+                
+                
 
             }
-            return false;
+            
         }
         bool Delete(T data)
         {
             Node* current = root;
+            if (current == nullptr)
+            {
+                //
+                return false;
+            }
             while (current!= nullptr)
             {
                 if (current->value == data )
                 {
                     delete current;
-                    
+                    current=nullptr;
                     return true;
                 }
                 
@@ -97,7 +109,7 @@ namespace TurboCollections
                 {
                     current = current->right;
                 }
-
+                
             }
             return false;
         }
