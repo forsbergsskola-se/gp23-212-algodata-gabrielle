@@ -93,7 +93,7 @@ namespace TurboCollections
                 {
                     delete current;
                     current = nullptr;
-                    return current;
+                    return true;
                 }
                 
                 if (data < current->value)
