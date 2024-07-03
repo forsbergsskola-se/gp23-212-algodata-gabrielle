@@ -16,7 +16,6 @@ namespace TurboCollections
             Node (int val): value(val), left(nullptr),right(nullptr){}
         };
     
-        
     public:
         
         Node* root = nullptr;
@@ -78,9 +77,6 @@ namespace TurboCollections
                     if (current == nullptr)
                         return false;
                 }
-                
-                
-
             }
             
         }
@@ -96,7 +92,7 @@ namespace TurboCollections
                 if (current->value == data )
                 {
                     delete current;
-                    current->value = 0;
+                    current = nullptr;
                     return current;
                 }
                 
