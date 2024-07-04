@@ -24,7 +24,7 @@ namespace TurboCollections
             tree.Insert(3);
             tree.Insert(5);
             tree.Insert(1);
-            EXPECT_FALSE(tree.Delete(3));
+            EXPECT_FALSE(tree.Delete(6));
         }
 
         TEST(BinarySearchTreeDelete, RemovesFoundItem)
