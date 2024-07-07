@@ -92,7 +92,7 @@ namespace TurboCollections
                 if (current->value == data )
                 {
                     delete current;
-                    current = nullptr;
+                    root = nullptr;
                     return true;
                 }
                 
